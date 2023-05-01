@@ -15,7 +15,7 @@ async function getLendingPool(account) {
         account)
 
     const lendingPoolAdress = await lendingPoolAddressesProvider.getLendingPool()
-    const lendingPool = await ehters.getContractAt(
+    const lendingPool = await ethers.getContractAt(
         "ILendingPool",
         lendingPoolAdress,
         )
