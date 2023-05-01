@@ -11,6 +11,9 @@ defaultNetwork: "hardhat",
             {
                 version: "0.4.19",
             },
+            {
+                version: "0.6.12",
+            },
         ],
     },
     networks: {
