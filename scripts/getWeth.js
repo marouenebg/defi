@@ -2,7 +2,8 @@ const { getNamedAccounts } = require("hardhat")
 const { ethers } = require("hardhat")
 
 
-const AMOUNT = ethers.utils.parseEther("0.1")
+const AMOUNT = ethers.utils.parseEther('0.1')
+
 async function getWeth() {
 
 //In order to interact with a contract, we need an account
