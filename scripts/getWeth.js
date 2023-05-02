@@ -22,4 +22,4 @@ const WethBalance = IWeth.balanceOf(deployer)
 console.log(`got {$WethBalance.toString()} WETH`)
 }
 
-module.exports = {getWeth}
+module.exports = {getWeth, AMOUNT}
