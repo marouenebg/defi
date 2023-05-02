@@ -23,12 +23,19 @@ await lendingPool.deposit(wethTokenAddress, AMOUNT, deployer, 0)
 
 
 //Borrow
+//how much can we borrow 
+let {availableBorrowsETH, totalDebtETH} = await getBorrowUserData(lendingPool, deployer)
 
 }
 
 
-
-
+async function getBorrowUserData(lendingPool, account) {
+    const {totalCollateralETH, totalDebtETH, availableBorrowsETH}  = await lendingPool.getUserAccountData(account)   
+    console.log(`You have ${totalCollateralETH} worth of eth`)
+    console.log(`You have ${totalDebtETH} worth of eth brorrowed`)
+    console.log(`You can borrow ${availableBorrowsETH} worth of eth`)
+    return {availableBorrowsETH, totalDebtETH}
+}
 
 
 async function approveERC20(erc20Address, spenderAddress, amountTospend, account) {
